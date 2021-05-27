@@ -1,0 +1,47 @@
+android_app {
+  name: "WireGuard",
+  manifest: "ui/src/main/AndroidManifest.xml",
+  certificate: "platform",
+  platform_apis: true,
+  product_specific: true,
+
+  srcs: [
+    "ui/src/main/**/*.kt",
+  ],
+
+  resource_dirs: [
+    "ui/src/main/res/",
+  ],
+
+  static_libs: [
+    "androidx.core_core",
+    "androidx.appcompat_appcompat",
+    "androidx.preference_preference",
+    "androidx.recyclerview_recyclerview",
+    "com.google.android.material_material",
+    "androidx.activity_activity-ktx",
+    "androidx.annotation_annotation",
+    "androidx.constraintlayout_constraintlayout",
+    "androidx.coordinatorlayout_coordinatorlayout",
+    "androidx.biometric_biometric",
+    "androidx.databinding_databinding-runtime",
+    "androidx.fragment_fragment-ktx",
+    "androidx.preference_preference-ktx",
+    "androidx.lifecycle_lifecycle-runtime-ktx",
+    "androidx.datastore_datastore-preferences",
+    "com.journeyapps_zxing-android-embedded",
+    "org.jetbrains.kotlinx_kotlinx-coroutines-core",
+    "org.jetbrains.kotlinx_kotlinx-coroutines-android",
+    "com.android.tools_desugar_jdk_libs",
+  ],
+
+  kotlincflags: ["-Xjvm-default=enable"],
+  
+  optimize: {
+    enabled: false,
+  },
+
+  dex_preopt: {                                                                                                                                                                                               
+    enabled: false,                                                                                                                                                                                         
+  },
+}
